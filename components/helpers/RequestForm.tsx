@@ -86,17 +86,27 @@ export default function RequestForm() {
 
       {/* Row 3 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input
-          type="date"
-          {...register("date")}
-          className="w-full border rounded-md px-4 py-3 text-sm"
-        />
+        <div className="flex flex-col gap-1">
+          <label className="text-xs font-medium text-gray-600">
+            Preferred Date
+          </label>
+          <input
+            type="date"
+            {...register("date")}
+            className="w-full border rounded-md px-4 py-3 text-sm"
+          />
+        </div>
 
-        <input
-          type="time"
-          {...register("time")}
-          className="w-full border rounded-md px-4 py-3 text-sm"
-        />
+        <div className="flex flex-col gap-1">
+          <label className="text-xs font-medium text-gray-600">
+            Preferred Time
+          </label>
+          <input
+            type="time"
+            {...register("time")}
+            className="w-full border rounded-md px-4 py-3 text-sm"
+          />
+        </div>
       </div>
 
       {/* Textarea */}
