@@ -37,8 +37,8 @@ const SLIDES: Slides[] = [
   },
   {
     id: 2,
-    image: "/banners/Banner - 2.png",
-    mobileImage: "/banners/mobile-2.jpg",
+    image: "/banners/Hero Canner Banner.png",
+    mobileImage: "/banners/Mobile Hero Canner Banner.png",
     subTitle: "",
     title: (
       <>
@@ -52,8 +52,8 @@ const SLIDES: Slides[] = [
   },
   {
     id: 3,
-    image: "/banners/Banner - 3.png",
-    mobileImage: "/banners/mobile-3.jpg",
+    image: "/banners/Hero Bulding Banner.png",
+    mobileImage: "/banners/Mobile Hero Bulding Banner.png",
     subTitle: "",
     title: (
       <>

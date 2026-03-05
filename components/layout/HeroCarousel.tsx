@@ -63,7 +63,7 @@ export default function HeroCarousel() {
           duration: 0.8,
           ease: "power3.inOut",
         },
-        0
+        0,
       );
 
       gsap.fromTo(
@@ -79,9 +79,9 @@ export default function HeroCarousel() {
           ease: "power3.out",
           stagger: 0.6,
           delay: 0.3,
-        }
+        },
       );
-    }
+    },
   );
 
   const handleNext = () => {
@@ -175,27 +175,42 @@ export default function HeroCarousel() {
                 </p>
               )}
 
-              {slide.emergency && (
-                <p
+              {/* BUTTON GROUP - Forced single line and side-by-side */}
+              <div className="flex flex-row items-center justify-center md:justify-start gap-3 pt-2 w-full overflow-x-auto no-scrollbar md:overflow-visible">
+                {/* Consultation Button */}
+                <button
                   data-animate
-                  className="text-sm font-semibold text-[#258195] uppercase"
+                  className="group relative flex-shrink-0 overflow-hidden bg-[#E56E1B] text-white px-5 md:px-8 py-3 rounded-full flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_20px_rgba(229,110,27,0.3)] whitespace-nowrap"
                 >
-                  {slide.emergency}
-                </p>
-              )}
+                  {/* Shine Effect Overlay */}
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shine_1s_ease-in-out]" />
 
-              <button
-                data-animate
-                className="group mx-auto md:mx-0 bg-[#E56E1B] text-white px-8 py-3 rounded-full flex items-center gap-2"
-              >
-                Book Consultation
-                <ArrowUpRight
-                  size={20}
-                  className="transition-transform duration-300 ease-out
-      group-hover:translate-x-1
-      group-hover:-translate-y-1"
-                />
-              </button>
+                  <span className="relative z-10 text-sm md:text-base font-medium">
+                    Book Consultation
+                  </span>
+                  <ArrowUpRight
+                    size={18}
+                    className="relative z-10 transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
+                </button>
+
+                {/* Emergency Button */}
+                <button
+                  data-animate
+                  className="group relative flex-shrink-0 overflow-hidden bg-[#299FB0] text-white px-5 md:px-8 py-3 rounded-full md:flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_20px_rgba(41,159,176,0.3)] whitespace-nowra  hidden"
+                >
+                  {/* Shine Effect Overlay */}
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shine_1s_ease-in-out]" />
+
+                  <span className="relative z-10 text-sm md:text-base font-medium">
+                    24/7 Emergency: 0261-226-5552
+                  </span>
+                  <ArrowUpRight
+                    size={18}
+                    className="relative z-10 transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
